@@ -1,0 +1,30 @@
+mixin SelectChildren({ labelId, options, placeholder, showSearch, multiple })
+  .tom-select-custom
+      select.js-select.form-select(multiple=multiple || false id=`${labelId}` autocomplete="off" data-hs-tom-select-options=`{ "placeholder": "${placeholder}", "hideSearch": ${showSearch ? 'false' : 'true'} }`)
+        if (placeholder)
+          option(value="")= placeholder
+        each item in options
+          option(value=`${item.value}`)= item.label
+
+mixin Select({ className = '', placeholder, options = [], labelId, label, iconSuffix, iconPrepend, showSearch, multiple })
+  .Select(class=`${className} ${iconSuffix ? 'suffix' : ''}`)
+    if (label)
+      label.form-label(for=`${labelId}`)
+        = label
+        if (required)
+          span.required.ms-1 (*)
+
+    if (iconSuffix || iconPrepend)
+      .input-group(class=`${iconPrepend ? 'input-group-merge' : ''}`)
+        if (iconPrepend)
+          .input-group-text(class=`${iconPrepend ? 'input-group-prepend' : ''}`)
+            i(class=`${iconPrepend}`)
+
+        +SelectChildren({ labelId, options, placeholder, showSearch, multiple })
+        if (iconSuffix)
+          .input-group-text
+            i(class=`${iconSuffix}`)
+    else
+      +SelectChildren({ labelId, options, placeholder, showSearch, multiple })
+
+    

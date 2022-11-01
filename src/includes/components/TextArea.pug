@@ -1,0 +1,21 @@
+mixin TextAreaChildren({ labelId, placeholder })
+  textarea(id=`${labelId}` class="form-control" placeholder=`${placeholder}`)
+
+mixin TextArea({ className = '', placeholder = '', labelId = '', label, required, suffixText })
+  .TextArea(class=`${className}`)
+    if (label)
+      label.form-label(for=`${labelId}`)
+        = label
+        if (required)
+          span.required.ms-1 (*)
+
+    if (suffixText)
+      .input-group
+        +TextAreaChildren({ labelId, placeholder })  
+
+        if (suffixText)
+          .input-group-text= suffixText
+    else
+      +TextAreaChildren({ labelId, placeholder })
+
+    

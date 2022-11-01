@@ -1,0 +1,30 @@
+mixin ScrollSpy({ title, id, parentId, endId, options = [], showChildren })
+  <div class="ScrollSpy navbar-expand-md">
+    <div class="d-grid">
+      button(type="button" class="navbar-toggler btn btn-white mb-3" data-bs-toggle="collapse" data-bs-target=`#${parentId}` aria-label="Toggle navigation" aria-expanded="false" aria-controls=`${parentId}`)
+        <span class="d-flex justify-content-between align-items-center">
+          span.text-dark.mb-0= title
+
+          <span class="navbar-toggler-default">
+            <i class="bi-list"></i>
+          </span>
+
+          <span class="navbar-toggler-toggled">
+            <i class="bi-x"></i>
+          </span>
+        </span>
+      </button>
+    </div>
+
+    .collapse.navbar-collapse(id=`${parentId}`)
+      .ScrollSpy-wrapper.js-sticky-block.js-scrollspy(id=`${id}` data-hs-sticky-block-options=`{ "parentSelector": "#${parentId}", "targetSelector": "#header", "breakpoint": "md", "startPoint": "#${parentId}", "endPoint": "#${endId}", "stickyOffsetTop": 8 }`)
+        if showChildren
+          block
+        else
+          +Card({ title, size: 'small', dark: true, noPadding: true })
+            ul.nav.nav-tabs.nav-link-gray.nav-vertical
+              each item in options
+                li.nav-item
+                  a.nav-link(href=`${item.link}` class=`${item.active ? 'active' : ''}`)= item.title
+    </div>
+  </div>

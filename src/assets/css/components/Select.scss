@@ -1,0 +1,38 @@
+.Select {
+  .tom-select-custom {
+    flex: 1;
+
+    .ts-custom-placeholder {
+      @include ellipsis(1);
+    }
+  }
+
+  .input-group-merge {
+    overflow: unset;
+
+    .form-control:not(:first-child),
+    .form-select:not(:first-child) {
+      padding-left: 2rem;
+    }
+
+    .form-select {
+      background: transparent;
+    }
+  }
+
+  &.suffix {
+    .form-select {
+      background-image: none;
+      border-top-left-radius: .3125rem !important;
+      border-bottom-left-radius: .3125rem !important;
+    }
+  }
+
+  .tom-select-custom .ts-control.multi .ts-input {
+    padding: 3px 2.25rem 3px 0;
+
+    &.has-items {
+      padding: .6125rem 2.25rem .6125rem 1rem;
+    }
+  }
+}

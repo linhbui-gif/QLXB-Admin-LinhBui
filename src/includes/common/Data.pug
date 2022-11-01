@@ -1,0 +1,367 @@
+-
+  const dataDashboardTotalCard = [
+    {
+      title: '1. Phê Duyệt đề tài',
+      value: '12',
+      icon: 'bi bi-file-medical',
+    },
+    {
+      title: '2.1 Duyệt cấp phép CXB',
+      value: '43',
+      icon: 'bi bi-ui-checks',
+    },
+    {
+      title: '2.2 Xin cấp phép CXB',
+      value: '1',
+      icon: 'bi bi-ui-checks',
+    },
+    {
+      title: '3. Ký HĐ Tác giả',
+      value: '5',
+      icon: 'bi bi-key-fill',
+    },
+    {
+      title: '4.1 BTV Sửa bản thảo',
+      value: '21',
+      icon: 'bi bi-files',
+    },
+    {
+      title: '4.2 Yêu cầu thiết kế',
+      value: '53',
+      icon: 'bi bi-files',
+    },
+    {
+      title: '5.1 Thiết kế bìa',
+      value: '34',
+      icon: 'bi bi-newspaper',
+    },
+    {
+      title: '5.2 BTV Duyệt Market bìa',
+      value: '5',
+      icon: 'bi bi-newspaper',
+    },
+    {
+      title: '5.3 Duyệt Market ruột',
+      value: '153',
+      icon: 'bi bi-newspaper',
+    },
+    {
+      title: '5.4 BTV Duyệt Market ruột',
+      value: '43',
+      icon: 'bi bi-newspaper',
+    },
+    {
+      title: '5.5 Chế bản bông',
+      value: '13',
+      icon: 'bi bi-newspaper',
+    },
+    {
+      title: '5.6 Phê duyệt bông',
+      value: '53',
+      icon: 'bi bi-newspaper',
+    },
+    {
+      title: '6. Ra quyết định in',
+      value: '153',
+      icon: 'bi bi-printer',
+    },
+  ]
+
+  const dataNavbar = [
+    {
+      link: '#',
+      icon: 'bi bi-house-fill',
+      title: 'Bảng điều khiển',
+      children: [],
+      active: true,
+    },
+    {
+      link: '#',
+      icon: 'bi bi-file-text',
+      title: 'Quản lý Xuất bản phẩm',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Danh sách XBP',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Phê duyệt XBP',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-ui-checks',
+      title: 'Phân loại đề tài',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý cấp, lớp',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý ngôn ngữ',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý môn học',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý bộ SGK',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Ấn phẩm gốc (dịch)',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý Mảng sách',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý đối tượng',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Lĩnh vực - ngành',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý lứa tuổi',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-key-fill',
+      title: 'Quản lý Cấp mã CXB',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'XBP cần cấp mã',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'GĐ duyệt gửi CXB',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'XBP chờ cấp mã',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'XBP đã cấp mã CXB',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-files',
+      title: 'Quản lý Biên tập',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Đề tài cần ký HĐ tác giả',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Sửa bản thảo',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Mô tả yêu cầu thiết kế',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Công cụ biên tập',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-newspaper',
+      title: 'Quản lý Chế bản',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Thiết kế bìa',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Duyệt thiết kế bìa',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Market ruột',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Duyệt Market ruột',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Chế bản bông',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Duyệt bông',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-printer',
+      title: 'Quản lý In ấn',
+      children: [],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-disc',
+      title: 'Quản lý Nộp lưu chiểu',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Đề tài cần lưu chiểu',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Danh mục hồ sơ lưu chiểu',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-sd-card',
+      title: 'CSDL Lưu ý của đơn vị',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Từ cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Chủ đề cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Nhóm từ cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Tài liệu tra soát',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-clipboard2-data',
+      title: 'CSDL Chung',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Từ cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Nhóm từ cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Chủ đề cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Tác giả cần lưu ý',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Quản lý dùng chung',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'CSDL ISBN',
+        },
+      ],
+    },
+    {
+      link: '#',
+      icon: 'bi bi-layers',
+      title: 'Quản lý đơn vị',
+      children: [
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'QL Phòng ban',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'QL Chức vụ',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'QL Nhân sự',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'QL biểu mẫu',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'Tra cứu Field',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'QL quy trình',
+        },
+        {
+          link: '#',
+          icon: 'bi bi-circle-fill',
+          title: 'QL Công đoạn',
+        },
+      ],
+    },
+  ]

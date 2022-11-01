@@ -1,0 +1,8 @@
+.Accordion {
+  &>.Card {
+    margin: -1px;
+  }
+  .accordion-body {
+    padding: 0;
+  }
+}

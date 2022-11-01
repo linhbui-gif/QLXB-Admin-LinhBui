@@ -1,0 +1,7 @@
+mixin Switch({ label, labelId })
+  .Switch
+    .form-check.form-switch
+      if (label)
+        label.form-check-label(for=`${labelId}`)= label
+
+      input.form-check-input(type="checkbox" id=`${labelId}` checked)

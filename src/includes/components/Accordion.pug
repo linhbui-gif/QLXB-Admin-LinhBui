@@ -1,0 +1,6 @@
+mixin Accordion({ className = '', id, parentId, title, mainId = '', dark, suffixText, noPadding, sortable })
+  .Accordion.accordion-item(class=`${className}` id=`${mainId}`)
+    +Card({ title, accordionId: id, accordionParentId: parentId, dark, suffixText, noPadding, sortable })
+      block
+    
+    

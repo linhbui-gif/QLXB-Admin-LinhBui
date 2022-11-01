@@ -1,0 +1,33 @@
+extends includes/layouts/Guest.pug
+
+block header
+  - const pageTitle = 'Xem trước người duyệt'
+
+block pages
+  .PreviewPage 
+    .content.container-fluid
+      .row 
+        .col-lg-9
+          +Card({ id: 'bieuin', noPadding: true })
+            .PreviewPage-submit.d-flex.flex-wrap.mb-3.border-bottom
+              +Button({ title: 'Duyệt', icon: 'bi bi-clipboard-check me-1', variant: 'btn-primary' })  
+              +Button({ title: 'Từ chối', icon: 'bi bi-x-lg me-1', variant: 'btn-soft-dark' })  
+              +Button({ title: 'Comment', icon: 'bi bi-chat-left-dots me-1', variant: 'btn-soft-dark' })  
+              +Button({ title: 'In biểu', icon: 'bi bi-printer me-1', variant: 'btn-soft-dark' })  
+
+            .PreviewPage-view-file
+
+            #scrollSpyEnd
+
+        .col-lg-3
+          +ScrollSpy({
+            title: 'Điều hướng trên trang',
+            id: 'scrollSpy',
+            parentId: 'scrollSpyParent',
+            endId: 'scrollSpyEnd',
+            options: [
+              { link: '#bieuso', title: 'Biểu số' },
+              { link: '#bieuin', title: 'Biểu in', active: true },
+              { link: '#xembankhaixuatbanpham', title: 'Xem bản khai Xuất bản phẩm' },
+            ]
+          })

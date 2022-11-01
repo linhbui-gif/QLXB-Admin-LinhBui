@@ -1,0 +1,20 @@
+mixin InputChildren({ type, labelId, placeholder, value, disabled })
+  input(type=`${type}` id=`${labelId}` class="form-control" placeholder=`${placeholder}` value=value || false disabled=disabled || false)
+
+mixin Input({ className = '', type = 'text', placeholder = '', labelId = '', label, required, suffixText, value, disabled })
+  .Input(class=`${className}`)
+    if (label)
+      label.form-label(for=`${labelId}`)
+        = label
+        if (required)
+          span.required.ms-1 (*)
+
+    if (suffixText)
+      .input-group
+        +InputChildren({ type, labelId, placeholder, value, disabled })  
+
+        if (suffixText)
+          .input-group-text= suffixText
+    else
+      +InputChildren({ type, labelId, placeholder, value, disabled })
+
